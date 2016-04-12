@@ -1,0 +1,12 @@
+{
+  "name": "demo-directsdk",
+  "preferGlobal": false,
+  "version": "1.0.0",
+  "author": "Aleksandr Furmanov <afurmanov@spotxchange.com>",
+  "description": "HTML5 Direct AdOS SDK Demo Tests",
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "selenium-standalone": "^4.8.0",
+    "webdriverio": "^3.3.0"
+  }
+}

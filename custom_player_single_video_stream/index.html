@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>DirectSDK Single Video Stream</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="../common/assets/ados_logger.css">
+    <link rel="stylesheet" href="../common/assets/player_controls.css">
+</head>
+
+<body>
+
+
+<div id="container">
+    <h3 id="title">Injecting Pre-Roll ad into custom video player</h3>
+
+    <div id="video-player">
+        <div id="ad-slot">
+            <video id="content-video">
+                <source src="https://archive.org/0/items/Wildlife_20160113/Wildlife.mp4" type="video/mp4">
+                <source src="https://archive.org/0/items/Wildlife_20160113/Wildlife.ogv" type="video/ogg">
+                Your browser doesn't support HTML5 video tag.
+            </video>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://js.spotx.tv/directsdk/v1/85394.js"></script>
+<!--TODO use somewhat like this URL instead:-->
+<!--<script type="text/javascript" src="http://js.spotx.tv/ad_player/v/<major>/sdk.js"></script>-->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../common/custom_video_player.js"></script>
+<script type="text/javascript" src="../common/ados_logger.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var videoPlayer = document.getElementById('video-player');
+        var adSlot = document.getElementById('ad-slot');
+
+        var directAdOS = new SpotX.DirectAdOS({
+            channel_id: 85394,
+            slot: adSlot,
+            video_slot: $("video")[0],
+            hide_skin: true,
+            autoplay: true
+        });
+
+        customVideoPlayer = new CustomVideoPlayer(jQuery, videoPlayer, directAdOS, true);
+        new AdOSLogger($, $("#container")[0], directAdOS);
+
+        directAdOS.loadAd();
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>DirectSDK HTML5 Video Element</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="../common/assets/ados_logger.css">
+</head>
+<body>
+<h3>Playing Pre-Roll Ad in HTML5 &lt;video&gt; element</h3>
+<div id="video-container">
+    <div id='video-content'>
+        <video controls id="video-player">
+            <source src="https://archive.org/0/items/Wildlife_20160113/Wildlife.mp4" type="video/mp4">
+            <source src="https://archive.org/0/items/Wildlife_20160113/Wildlife.ogv" type="video/ogg">
+            Your browser doesn't support HTML5 video tag.
+        </video>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://js.spotx.tv/directsdk/v1/85394.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../common/ados_logger.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var adContainer = document.getElementById('video-content');
+        var directAdOS = new SpotX.DirectAdOS({
+            channel_id: 85394,
+            slot: adContainer,
+            video_slot: document.getElementById('video-player'),
+            hide_skin: false,
+            autoplay: true
+        });
+        new AdOSLogger($, $("#video-container")[0], directAdOS)
+        directAdOS.loadAd();
+    });
+</script>
+</body>
+</html>

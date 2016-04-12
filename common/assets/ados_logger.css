@@ -1,0 +1,7 @@
+#ados-logger-events-list ul {
+    list-style-type: none;
+}
+
+#ados-logger-events-list li.last {
+    font-weight: bold;
+}

@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>DirectSDK Two Video Streams</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="../common/assets/ados_logger.css">
+    <link rel="stylesheet" href="../common/assets/player_controls.css">
+</head>
+
+<body>
+
+
+<div id="container">
+    <h3 id="title">Playing Ad into custom video player with delay of 5 seconds</h3>
+
+    <div id="video-player">
+        <video id="content-video">
+            <source src="https://archive.org/0/items/Wildlife_20160113/Wildlife.mp4" type="video/mp4">
+            <source src="https://archive.org/0/items/Wildlife_20160113/Wildlife.ogv" type="video/ogg">
+            Your browser doesn't support HTML5 video tag.
+        </video>
+
+        <div id="ad-slot">
+            <video>
+            </video>
+        </div>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript" src="http://js.spotx.tv/directsdk/v1/85394.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../common/custom_video_player.js"></script>
+<script type="text/javascript" src="../common/ados_logger.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var adSlot = document.getElementById('ad-slot');
+        var videoPlayer = document.getElementById('video-player');
+
+        var directAdOS = new SpotX.DirectAdOS({
+                    channel_id: 85394,
+                    slot: adSlot,
+                    video_slot: $(adSlot).find("video")[0],
+                    hide_skin: true,
+                    autoplay: false
+                });
+
+        customVideoPlayer = new CustomVideoPlayer(jQuery, videoPlayer, directAdOS, false);
+        new AdOSLogger($, $("#container")[0], directAdOS)
+        customVideoPlayer.play();
+
+        directAdOS.subscribe(function () {
+            $(adSlot).hide();
+        }, SpotX.DirectAdOS.Events.AD_AFTER_STOPPED);
+
+        var startNextAd = function () {
+            $(adSlot).show();
+            directAdOS.loadAd().then( function() {
+                return directAdOS.playAd();
+            });
+        };
+
+        window.setTimeout(startNextAd, 5 * 1000);
+    });
+</script>
+
+</body>
+
+</html>

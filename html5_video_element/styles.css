@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#video-container {
+    position: relative;
+    width: 416px;
+    height: 240px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#video-player {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 416px;
+    height: 240px;
+}
+
+#video-content, #video-player video {
+    width: 416px;
+    height: 240px;
+}
