@@ -191,93 +191,17 @@
   The following is an incomplete list of properties that can be put on the custom object. These are the default SpotX key-value pairs,
   but publishers may add their own custom key-value pairs on request.
 
-  ##### Launcher Type (wgt)
-  ###### type : NUMERIC VALUE
+| Attribute              | Type   | Property Name | Description |
+|------------------------|--------|---------------|-------------|
+| Launcher Type          | Number | wgt           | custom[wgt] = number <br> number can be: <br> 0: UI <br> 1: AP <br> 8: Hz Launcher <br> 9: RMM ad, Sound On Slider <br> 10: Sound On 590 <br> 13: RMM ad, Sound On Inline 300 14: RMM ad, Sound On Inline 590 |
+| Player Type            | Number | plt           | custom[plt] = number <br> number can be: <br> 2: 16x9 Full Player <br> 4: Inline 300 <br> 5: Single <br> 11: Inline 590 <br> 16: Studio Player <br> 17: 300x250 Slider <br> 18: 300x250 Playlist Slider <br> 19: Horizontal <br> 20: Vertical |
+| Fold Position          | Number | fp            | custom[fp] = number <br> number can be: <br> 0: iFrame Code <br> 1: Above the fold <br> 2: Below the fold <br> 3: Scroll to above the fold |
+| Content Category       | String | category      | custom[category] = string <br> string can be: <br> sports <br> news <br> health <br> travel <br> lifestyle <br> technology <br> politics <br> weather <br> entertainment <br> business |
+| Content Provider       | any    | cid           | custom[cid] = value <br> value can be: <br> any URL-encoded value |
+| Video ID               | any    | vid           | custom[vid] = value <br> value can be: <br> any URL-encoded value |
+| Premium Targeted Reach | number | ptr           | custom[ptr] = value <br> value can be: <br> 0: PTR not enabled <br> 1: PTR enabled |
+| Distribution Provider  | any    | dpid          | custom[dpid] = value <br> value can be: <br> any URL-encoded value |
 
-
-  NUMERIC VALUES include:
-
-    0: UI
-    1: AP
-    8: Hz Launcher
-    9: RMM ad, Sound On Slider
-    10: Sound On 590
-    13: RMM ad, Sound On Inline 300
-    14: RMM ad, Sound On Inline 590
-
-  ##### Player Type (plt)
-  ###### type: NUMERIC VALUE
-
-  NUMERIC VALUES include:
-
-    2: 16x9 Full Player
-    4: Inline 300
-    5: Single
-    11: Inline 590
-    16: Studio Player
-    17: 300x250 Slider
-    18: 300x250 Playlist Slider
-    19: Horizontal
-    20: Vertical
-
-  ##### Fold Position (fp)
-  ###### type: NUMERIC VALUE
-
-  NUMERIC VALUES include:
-
-    0: iFrame Code
-    1: Above the fold
-    2: Below the fold
-    3: Scroll to above the fold
-
-  ##### Content Category (category)
-  ###### type: STRING VALUE
-
-  STRING VALUES include:
-
-    sports
-    news
-    health
-    travel
-    lifestyle
-    technology
-    politics
-    weather
-    entertainment
-    business
-
-  in the event of multiple values for one key, please use an array:
-
-  ```
-  <script>
-    var custom = {
-      category: [
-        'sports',
-        'entertainment',
-        'news'
-      ]
-    };
-  </script>
-  ```
-
-  ##### Content Provider (cid)
-  ###### type: VALUE
-  VALUE can be any URL-encoded value
-
-  ##### Video ID (vid)
-  ###### type: VALUE
-  VALUE can be any URL-encoded value
-
-  ##### Premium Targeted Reach (ptr)
-  ###### type: VALUE
-  VALUES include:
-
-    0: PTR not enabled
-    1: PTR enabled
-
-  ##### Distribution Provider (dpid)
-  ###### type: VALUE
-  VALUE can be any URL-encoded value
 
   ### Creating Key-Value Reports
   Once you start passing in key-value pairs, contact your Account Manager to schedule automatic delivery of reports.
