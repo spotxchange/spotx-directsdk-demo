@@ -252,7 +252,7 @@ The following is a list of parameters that can be passed as query_params.
 
 ***
 
-### Passing Custom Pass-Through Macros
+### Custom Pass-Through Macros
 
 Custom Pass-Through Macros can be passed to SpotMarket by including an object named ​token​ in the DirectAdOS options. Each item in the ​token​ object represents a custom pass through macro.
 
@@ -272,7 +272,7 @@ var directAdOS = new SpotX.DirectAdOS({
 
 ### Subscribing to VPAID Events
 
-The Direct AdOS SDK supports and will publish several VPAID events. To attach a callback function to one of these events, call the `subscribe` method.
+The Direct AdOS SDK will publish several VPAID events. To attach a callback function to one of these events, call the `subscribe` method.
 
 ```
 directAdOS.subscribe(function() { 
