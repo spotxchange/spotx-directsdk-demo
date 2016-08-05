@@ -2,6 +2,8 @@
 
  Monetize your website video content by extending your video player with an ad-experience.
 
+***
+
 # When You Should Use the Direct AdOS SDK
 
  - You want to use SpotX as your primary ad source
@@ -15,7 +17,7 @@
  * [Apply to become a SpotX Publisher](http://www.spotxchange.com/publishers/apply-to-become-a-spotx-publisher/)
 
 
-## Using the Direct AdOS SDK
+## Usage
 
   There are two major integration scenarios:
 
@@ -28,7 +30,7 @@
   to our simple API.
 
 
-
+***
 
 ### Simplest integration scenario
 1. Create files `index.html`, `styles.css`:
@@ -113,6 +115,7 @@
 3. Visit URL `http://localhost:8080/index.html` in the browser.
   You should see ad playing followed by main video content
 
+***
 
 ### Integrating with custom video player
 
@@ -129,10 +132,11 @@
   have to stop one when the other is about to begin playing, and make sure that both go to full-screen when prompted,
    etc. One advantage with this method is that you could modify it to play mid-roll or post-roll ads.
 
-### Key-value pairs, Reporting, and Targeting
+***
 
-Passing key-value pairs into the Direct AdOS SDK is easy; simply pass an options object into the constructor when initializing
-an instance of the DirectAdOS.
+### Key-value pairs
+
+Key-value pairs can be passed to the Direct AdOS SDK in an options object when creating a new instance of `SpotX.DirectAdOS`
   
 ```
 var directAdOS = new SpotX.DirectAdOS({
@@ -150,10 +154,7 @@ Example use of `content_id`
 ```
 var directAdOS = new SpotX.DirectAdOS({
 	channel_id: 85394,
-	slot: adContainer,
-	video_slot: document.getElementById('video-player'),
-	hide_skin: false,
-	autoplay: true,
+	// ...
 	content_id: "9876543210"
 });
 ```
@@ -163,10 +164,7 @@ In addition to the content_id parameter, you can pass the following other parame
 ```
 var directAdOS = new SpotX.DirectAdOS({
 	channel_id: 85394,
-	slot: adContainer,
-	video_slot: document.getElementById('video-player'),
-	hide_skin: false,
-	autoplay: true,
+	// ...
 	content_id: "9876543210",
 	custom: {
 		wgt: 9,
@@ -177,6 +175,26 @@ var directAdOS = new SpotX.DirectAdOS({
 		vid: "TEST",
 		ptr: 1,
 		dpid: 1234567890
+	}
+});
+```
+
+To pass multiple keys, such as `custom[category]`, an array should be used:
+
+
+```
+var directAdOS = new SpotX.DirectAdOS({
+	channel_id: 85394,
+	// ...
+	content_id: "9876543210",
+	custom: {
+		wgt: 9,
+		// ...
+		category: [
+			'sports',
+			'entertainment',
+			'news'
+		]
 	}
 });
 ```
@@ -194,6 +212,7 @@ The following is an incomplete list of properties that can be put on the custom 
 | Premium Targeted Reach | number | ptr           | custom[ptr] = value <br> value can be: <br> 0: PTR not enabled <br> 1: PTR enabled |
 | Distribution Provider  | any    | dpid          | custom[dpid] = value <br> value can be: <br> any URL-encoded value |
 
+***
 
 ### Sending Query Parameters to SpotMarket
 Query Parameters can be passed to Spotmarket by including `ados["query_params"]` in the the DirectAdOS options.
@@ -231,7 +250,27 @@ The following is a list of parameters that can be passed as query_params.
 | Publisher DSP UID      | Any              | pub_dsp_uid       | This parameter is intended to allow publishers operating in cookieless environments to provide a user ID that will be sent to DSPs for frequency capping                                                                                                                                             |
 | Media Transcoding      | String           | media_transcoding | The media transcoding parameter allows a publisher to reduce the ads returned from an auction to only the requested quality. The quality can be low, medium, or high, and a publisher can request any combination of those values (e.g., you may request only low and medium transcoding qualities). |
 
-### VPAID Events
+***
+
+### Passing Custom Pass-Through Macros
+
+Custom Pass-Through Macros can be passed to SpotMarket by including an object named ​token​ in the DirectAdOS options. Each item in the ​token​ object represents a custom pass through macro.
+
+
+```
+var directAdOS = new SpotX.DirectAdOS({
+	channel_id: 85394,
+	...
+	token: {
+		video_title: "EXAMPLE_VIDEO_TITLE",
+		"video_description": "EXAMPLE_VIDEO_DESCRIPTION"
+	}
+});
+```
+
+***
+
+### Subscribing to VPAID Events
 
 The Direct AdOS SDK supports and will publish several VPAID events. To attach a callback function to one of these events, call the `subscribe` method.
 
