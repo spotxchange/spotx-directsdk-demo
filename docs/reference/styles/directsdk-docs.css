@@ -1,0 +1,339 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src:
+            local('Open Sans'),
+            local('OpenSans'),
+            url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+            url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/OpenSans-Light-webfont.eot');
+    src:
+            local('Open Sans Light'),
+            local('OpenSans Light'),
+            url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
+            url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+}
+
+.directsdk-main {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #4d4e53;
+    background-color: white;
+}
+
+.directsdk-main table {
+    margin: 0;
+}
+
+.directsdk-main header
+{
+    display: block;
+    padding: 0px 4px;
+}
+
+.directsdk-main dd {
+    margin-left: 40px;
+}
+
+.directsdk-main tt, .directsdk-main code, .directsdk-main kbd, .directsdk-main samp {
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+.directsdk-main .class-description {
+    font-size: 130%;
+    line-height: 140%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.directsdk-main .class-description:empty {
+    margin: 0;
+}
+
+.directsdk-main  {
+    float: left;
+    width: 70%;
+}
+
+.directsdk-main article dl {
+    margin-bottom: 40px;
+}
+
+.directsdk-main section
+{
+    display: block;
+    background-color: #fff;
+    padding: 12px 24px;
+    border-bottom: 1px solid #ccc;
+    margin-right: 30px;
+}
+
+.directsdk-main .variation {
+    display: none;
+}
+
+.directsdk-main .signature-attributes {
+    font-size: 60%;
+    color: #aaa;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.directsdk-main nav
+{
+    display: block;
+    float: right;
+    margin-top: 28px;
+    width: 30%;
+    box-sizing: border-box;
+    border-left: 1px solid #ccc;
+    padding-left: 16px;
+}
+
+.directsdk-main nav ul {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', arial, sans-serif;
+    font-size: 100%;
+    line-height: 17px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.directsdk-main nav ul a, nav ul a:visited, nav ul a:active {
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    line-height: 18px;
+}
+
+.directsdk-main nav h3 {
+    margin-top: 12px;
+}
+
+.directsdk-main nav li {
+    margin-top: 6px;
+}
+
+
+.directsdk-main h1, .directsdk-main h2, .directsdk-main h3, .directsdk-main h4 {
+    font-weight: 200;
+    margin: 0;
+}
+
+.directsdk-main h1
+{
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 48px;
+    letter-spacing: -2px;
+    margin: 12px 24px 20px;
+}
+
+.directsdk-main h2, .directsdk-main h3
+{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.directsdk-main h4
+{
+    font-size: 18px;
+    letter-spacing: -0.33px;
+    margin-bottom: 12px;
+    color: #4d4e53;
+}
+
+.directsdk-main h5, .directsdk-main .container-overview .subsection-title
+{
+    font-size: 120%;
+    font-weight: bold;
+    letter-spacing: -0.01em;
+    margin: 8px 0 3px 0;
+}
+
+.directsdk-main h6
+{
+    font-size: 100%;
+    letter-spacing: -0.01em;
+    margin: 6px 0 3px 0;
+    font-style: italic;
+}
+
+.directsdk-main .ancestors { color: #999; }
+.directsdk-main .ancestors a
+{
+    color: #999 !important;
+    text-decoration: none;
+}
+
+.directsdk-main .clear
+{
+    clear: both;
+}
+
+.directsdk-main .important
+{
+    font-weight: bold;
+    color: #950B02;
+}
+
+.directsdk-main .yes-def {
+    text-indent: -1000px;
+}
+
+.directsdk-main .type-signature {
+    color: #aaa;
+}
+
+.directsdk-main .name, .signature {
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+.directsdk-main .details { margin-top: 14px; border-left: 2px solid #DDD; }
+.directsdk-main .details dt { width: 120px; float: left; padding-left: 10px;  padding-top: 6px; }
+.directsdk-main .details dd { margin-left: 70px; }
+.directsdk-main .details ul { margin: 0; }
+.directsdk-main .details ul { list-style-type: none; }
+.directsdk-main .details li { margin-left: 30px; padding-top: 6px; }
+.directsdk-main .details pre.prettyprint { margin: 0 }
+.directsdk-main .details .object-value { padding-top: 0; }
+
+.directsdk-main .description {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.directsdk-main .code-caption
+{
+    font-style: italic;
+    font-size: 107%;
+    margin: 0;
+}
+
+.directsdk-main .prettyprint
+{
+    border: 1px solid #ddd;
+    width: 80%;
+    overflow: auto;
+}
+
+.directsdk-main .prettyprint.source {
+    width: inherit;
+}
+
+.directsdk-main .prettyprint code
+{
+    font-size: 100%;
+    line-height: 18px;
+    display: block;
+    padding: 4px 12px;
+    margin: 0;
+    background-color: #fff;
+    color: #4D4E53;
+}
+
+.directsdk-main .prettyprint code span.line
+{
+    display: inline-block;
+}
+
+.directsdk-main .prettyprint.linenums
+{
+    padding-left: 70px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.directsdk-main .prettyprint.linenums ol
+{
+    padding-left: 0;
+}
+
+.directsdk-main .prettyprint.linenums li
+{
+    border-left: 3px #ddd solid;
+}
+
+.directsdk-main .prettyprint.linenums li.selected,
+.directsdk-main .prettyprint.linenums li.selected *
+{
+    background-color: lightyellow;
+}
+
+.directsdk-main .prettyprint.linenums li *
+{
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.directsdk-main .params, .directsdk-main .props
+{
+    border-spacing: 0;
+    border: 0;
+    border-collapse: collapse;
+}
+
+.directsdk-main .params .name, .directsdk-main .props .name, .directsdk-main .name code {
+    color: #4D4E53;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 100%;
+}
+
+.directsdk-main .params td, .directsdk-main .params th, .directsdk-main .props td, .directsdk-main .props th
+{
+    border: 1px solid #ddd;
+    margin: 0px;
+    text-align: left;
+    vertical-align: top;
+    padding: 4px 6px;
+    display: table-cell;
+}
+
+.directsdk-main .params thead tr, .directsdk-main .props thead tr, .directsdk-main table > thead > tr:first-child > th
+{
+    background-color: #ddd;
+    font-weight: bold;
+    color: black;
+    border: 0;
+}
+
+.directsdk-main .params .params thead tr, .directsdk-main .props .props thead tr
+{
+    background-color: #fff;
+    font-weight: bold;
+}
+
+
+.directsdk-main .params th, .directsdk-main .props th, .directsdk-main table > thead > tr:first-child > th { border-right: 1px solid #aaa; }
+.directsdk-main .params thead .last, .directsdk-main .props thead .last { border-right: 1px solid #ddd; }
+
+.directsdk-main .params td.description > p:first-child,
+.directsdk-main .props td.description > p:first-child
+{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.directsdk-main .params td.description > p:last-child,
+.directsdk-main .props td.description > p:last-child
+{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.directsdk-main .disabled {
+    color: #454545;
+}
