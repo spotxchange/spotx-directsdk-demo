@@ -247,7 +247,7 @@ var directAdOS = new SpotX.DirectAdOS({
 	channel_id: 85394,
 	// ...
 	ados: {
-		query_params: "media_transcoding[]=medium
+		query_params: "media_transcoding[]=medium"
 	}
 });
 ```
@@ -256,14 +256,14 @@ The following is a list of parameters that can be passed as query_params.
 
 | Attribute              | Type             | Property Name     | Description                                                                                                                                                                                                                                                                                          |
 |------------------------|------------------|-------------------|-------------|
-| Price Floor | Positive Integer | price_floor | This parameter can be passed in a request (in USD) to set the current channel price floor in real time                                                                                                                                                                                               |
-| Audience ID | String | spotx_uid | Audience Id is used to pass AMP audience ids directly into the syndication request.                                                                                                                                                                                                                  |
-| Video Player Interface | String | vpi | The VPI parameter allows the publisher to specify which specific types of media they are able to play. Possible values: `mp4`, `flv`, `wmv`, `vpaid`, `vpaid_js`, `webm`                                                                                                                                        |
-| Publisher DSP UID | Any | pub\_dsp_uid | This parameter is intended to allow publishers operating in cookieless environments to provide a user ID that will be sent to DSPs for frequency capping                                                                                                                                             |
-| Media Transcoding | String | media_transcoding[] | The media transcoding parameter allows a publisher to reduce the ads returned from an auction to only the requested quality. The quality can be low, medium, or high, and a publisher can request any combination of those values (e.g., you may request only low and medium transcoding qualities).
-| Max Duration | Positive Integer | VMaxd | This parameter can be passed in a request (in seconds) to override the current channel's max duration value
-| Mobile - App Information | String | app[] | The app parameter allows a mobile application to identify itself or provide other information about the app. Possible values: `bundle`, `cat`, `domain`, `id`, `name`, `privacypolicy`, `storeurl`, `store_foreign_app_id`, `ver`
-| Mobile - Device Information | String | device[] | The app parameter allows a mobile application to provide information about the device
+| Price Floor | Positive Integer | `price_floor` | This parameter can be passed in a request (in USD) to set the current channel price floor in real time                                                                                                                                                                                               |
+| Audience ID | String | `spotx_uid` | Audience Id is used to pass AMP audience ids directly into the syndication request.                                                                                                                                                                                                                  |
+| Video Player Interface | String | `vpi` | The VPI parameter allows the publisher to specify which specific types of media they are able to play. Possible values: `mp4`, `flv`, `wmv`, `vpaid`, `vpaid_js`, `webm`                                                                                                                                        |
+| Publisher DSP UID | Any | `pub_dsp_uid` | This parameter is intended to allow publishers operating in cookieless environments to provide a user ID that will be sent to DSPs for frequency capping                                                                                                                                             |
+| Media Transcoding | String | `media_transcoding[]` | The media transcoding parameter allows a publisher to reduce the ads returned from an auction to only the requested quality. The quality can be low, medium, or high, and a publisher can request any combination of those values (e.g., you may request only low and medium transcoding qualities).
+| Max Duration | Positive Integer | `VMaxd` | This parameter can be passed in a request (in seconds) to override the current channel's max duration value
+| Mobile - App Information | String | `app[]` | The app parameter allows a mobile application to identify itself or provide other information about the app. Possible values: `bundle`, `cat`, `domain`, `id`, `name`, `privacypolicy`, `storeurl`, `store_foreign_app_id`, `ver`
+| Mobile - Device Information | String | `device[]` | The app parameter allows a mobile application to provide information about the device
 
 ***
 
